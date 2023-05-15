@@ -6,10 +6,6 @@ import altair as alt
 
 openai.api_key = st.secrets["API_key"]
 
-
-# Define the Streamlit app
-def app():
-
 def save_and_download_csv(dataframe):
     # Save the dataframe as a CSV file
     dataframe.to_csv('output.csv', index=False)
@@ -20,8 +16,11 @@ def save_and_download_csv(dataframe):
     st.download_button(label='Download CSV', data=csv_data, \
                        file_name='output.csv', mime='text/csv')
 
-# Streamlit app
-def main():
+
+# Define the Streamlit app
+def app():
+
+d
     st.title("CSV File Download")
     st.write("Generate a CSV file and download it.")
 
@@ -36,9 +35,6 @@ def main():
 
     # Save and download the CSV file
     save_and_download_csv(df)
-
-if __name__ == '__main__':
-    main()
 
 # Run the app
 if __name__ == "__main__":
