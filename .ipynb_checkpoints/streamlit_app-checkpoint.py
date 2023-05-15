@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-
-openai.api_key = st.secrets["API_key"]
-
 def save_and_download_csv(dataframe):
     # Save the dataframe as a CSV file
     dataframe.to_csv('output.csv', index=False)
