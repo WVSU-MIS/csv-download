@@ -19,8 +19,6 @@ def save_and_download_csv(dataframe):
 
 # Define the Streamlit app
 def app():
-
-d
     st.title("CSV File Download")
     st.write("Generate a CSV file and download it.")
 
